@@ -1,0 +1,38 @@
+1. Clone Husky robot gazebo
+2. git clone https://github.com/husky/husky_simulator.git
+3. ln -s ~/git/husky_simulator/husky_gazebo ~/catkin_ws/src/
+4. Remove symbolic link: just delete it
+
+
+fix missed packages:
+========================================
+git clone https://github.com/cra-ros-pkg/robot_localization.git
+ln -s ~/git/robot_localization ~/catkin_ws/src
+
+Fixed error:
+============
+GazeboRosControlPlugin missing <legacyModeNS> while using DefaultRobotHWSim, defaults to true.
+Edited two xacro files:
+/home/yangnie/git/husky_simulator/husky_gazebo/urdf/description.gazebo.xacro
+/home/yangnie/git/husky/husky_description/urdf/husky.urdf.xacro
+Added <legacyModeNS>true</legacyModeNS> line.
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+      <robotNamespace>/</robotNamespace>
+      <legacyModeNS>true</legacyModeNS>
+    </plugin>
+  </gazebo>
+
+
+Test run
+============
+1. No map: roslaunch husky_gazebo husky_empty_world.launch
+2. Simple Map: roslaunch husky_gazebo husky_playpen.launch
+3. Large map: roslaunch husky_gazebo husky_empty_world.launch world_name:=worlds/willowgarage.world
+4. Gazebo map: roslaunch husky_gazebo husky_empty_world.launch world_name:=worlds/robocup14_spl_field.world
+
+test under husky-robot
+======================
+1. roslaunch husky-robot husky_empty_world.launch world_name:=worlds/robocup14_spl_field.world
+2. roslaunch husky-robot spawn_husky.launch
+3. roslaunch husky-robot husky_teleop.launch

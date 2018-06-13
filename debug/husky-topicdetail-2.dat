@@ -1,0 +1,374 @@
+rostopic list -p for publisher list
+==========================================================
+/clock
+/cmd_vel
+/diagnostics
+/gazebo/link_states
+/gazebo/model_states
+/gazebo/parameter_descriptions
+/gazebo/parameter_updates
+/gazebo_gui/parameter_descriptions
+/gazebo_gui/parameter_updates
+/husky_velocity_controller/cmd_vel
+/husky_velocity_controller/odom
+/husky_velocity_controller/parameter_descriptions
+/husky_velocity_controller/parameter_updates
+/joint_states
+/odometry/filtered
+/rosout
+/rosout_agg
+/tf
+/tf_static
+/twist_marker_server/cmd_vel
+/twist_marker_server/update
+/twist_marker_server/update_full
+
+rostopic list -s for subscriber list
+==========================================================
+/clock
+/cmd_vel
+/e_stop
+/gazebo/set_link_state
+/gazebo/set_model_state
+/husky_velocity_controller/cmd_vel
+/husky_velocity_controller/odom
+/imu/data
+/joint_states
+/joy_teleop/cmd_vel
+/rosout
+/set_pose
+/statistics
+/tf
+/tf_static
+/twist_marker_server/cmd_vel
+/twist_marker_server/feedback
+==========================================================
+rostopic info /clock
+----------------------------------------------------
+Type: rosgraph_msgs/Clock
+
+Publishers: 
+ * /gazebo (http://yang-HP-OMEN-880:37463/)
+
+Subscribers: 
+ * /rosout (http://yang-HP-OMEN-880:41607/)
+ * /gazebo (http://yang-HP-OMEN-880:37463/)
+ * /gazebo_gui (http://yang-HP-OMEN-880:32873/)
+ * /twist_marker_server (http://yang-HP-OMEN-880:38951/)
+ * /ekf_localization (http://yang-HP-OMEN-880:43567/)
+ * /twist_mux (http://yang-HP-OMEN-880:43447/)
+ * /robot_state_publisher (http://yang-HP-OMEN-880:35087/)
+ * /base_controller_spawner (http://yang-HP-OMEN-880:34299/)
+ * /teleop (http://yang-HP-OMEN-880:41031/)
+ * /rqt_gui_py_node_24599 (http://yang-HP-OMEN-880:42649/)
+
+
+rostopic info /cmd_vel
+----------------------------------------------------
+Type: geometry_msgs/Twist
+
+Publishers: 
+ * /teleop (http://yang-HP-OMEN-880:41031/)
+
+Subscribers: 
+ * /twist_mux (http://yang-HP-OMEN-880:43447/)
+
+
+rostopic info /diagnostics
+----------------------------------------------------
+Type: diagnostic_msgs/DiagnosticArray
+
+Publishers: 
+ * /ekf_localization (http://yang-HP-OMEN-880:43567/)
+ * /twist_mux (http://yang-HP-OMEN-880:43447/)
+
+Subscribers: None
+
+
+rostopic info /e_stop
+----------------------------------------------------
+Type: std_msgs/Bool
+
+Publishers: None
+
+Subscribers: 
+ * /twist_mux (http://yang-HP-OMEN-880:43447/)
+
+
+rostopic info /gazebo/link_states
+----------------------------------------------------
+Type: gazebo_msgs/LinkStates
+
+Publishers: 
+ * /gazebo (http://yang-HP-OMEN-880:37463/)
+
+Subscribers: None
+
+
+rostopic info /gazebo/model_states
+----------------------------------------------------
+Type: gazebo_msgs/ModelStates
+
+Publishers: 
+ * /gazebo (http://yang-HP-OMEN-880:37463/)
+
+Subscribers: None
+
+
+rostopic info /gazebo/parameter_descriptions
+----------------------------------------------------
+Type: dynamic_reconfigure/ConfigDescription
+
+Publishers: 
+ * /gazebo (http://yang-HP-OMEN-880:37463/)
+
+Subscribers: None
+
+
+rostopic info /gazebo/parameter_updates
+----------------------------------------------------
+Type: dynamic_reconfigure/Config
+
+Publishers: 
+ * /gazebo (http://yang-HP-OMEN-880:37463/)
+
+Subscribers: None
+
+
+rostopic info /gazebo/set_link_state
+----------------------------------------------------
+Type: gazebo_msgs/LinkState
+
+Publishers: None
+
+Subscribers: 
+ * /gazebo (http://yang-HP-OMEN-880:37463/)
+
+
+rostopic info /gazebo/set_model_state
+----------------------------------------------------
+Type: gazebo_msgs/ModelState
+
+Publishers: None
+
+Subscribers: 
+ * /gazebo (http://yang-HP-OMEN-880:37463/)
+
+
+rostopic info /gazebo_gui/parameter_descriptions
+----------------------------------------------------
+Type: dynamic_reconfigure/ConfigDescription
+
+Publishers: 
+ * /gazebo_gui (http://yang-HP-OMEN-880:32873/)
+
+Subscribers: None
+
+
+rostopic info /gazebo_gui/parameter_updates
+----------------------------------------------------
+Type: dynamic_reconfigure/Config
+
+Publishers: 
+ * /gazebo_gui (http://yang-HP-OMEN-880:32873/)
+
+Subscribers: None
+
+
+rostopic info /husky_velocity_controller/cmd_vel
+----------------------------------------------------
+Type: geometry_msgs/Twist
+
+Publishers: 
+ * /twist_mux (http://yang-HP-OMEN-880:43447/)
+
+Subscribers: 
+ * /gazebo (http://yang-HP-OMEN-880:37463/)
+
+
+rostopic info /husky_velocity_controller/odom
+----------------------------------------------------
+Type: nav_msgs/Odometry
+
+Publishers: 
+ * /gazebo (http://yang-HP-OMEN-880:37463/)
+
+Subscribers: 
+ * /ekf_localization (http://yang-HP-OMEN-880:43567/)
+
+
+rostopic info /husky_velocity_controller/parameter_descriptions
+----------------------------------------------------
+Type: dynamic_reconfigure/ConfigDescription
+
+Publishers: 
+ * /gazebo (http://yang-HP-OMEN-880:37463/)
+
+Subscribers: None
+
+
+rostopic info /husky_velocity_controller/parameter_updates
+----------------------------------------------------
+Type: dynamic_reconfigure/Config
+
+Publishers: 
+ * /gazebo (http://yang-HP-OMEN-880:37463/)
+
+Subscribers: None
+
+
+rostopic info /imu/data
+----------------------------------------------------
+Type: sensor_msgs/Imu
+
+Publishers: None
+
+Subscribers: 
+ * /ekf_localization (http://yang-HP-OMEN-880:43567/)
+
+
+rostopic info /joint_states
+----------------------------------------------------
+Type: sensor_msgs/JointState
+
+Publishers: 
+ * /gazebo (http://yang-HP-OMEN-880:37463/)
+
+Subscribers: 
+ * /robot_state_publisher (http://yang-HP-OMEN-880:35087/)
+
+
+rostopic info /joy_teleop/cmd_vel
+----------------------------------------------------
+Type: geometry_msgs/Twist
+
+Publishers: None
+
+Subscribers: 
+ * /twist_mux (http://yang-HP-OMEN-880:43447/)
+
+
+rostopic info /odometry/filtered
+----------------------------------------------------
+Type: nav_msgs/Odometry
+
+Publishers: 
+ * /ekf_localization (http://yang-HP-OMEN-880:43567/)
+
+Subscribers: None
+
+
+rostopic info /rosout
+----------------------------------------------------
+Type: rosgraph_msgs/Log
+
+Publishers: 
+ * /gazebo (http://yang-HP-OMEN-880:37463/)
+ * /gazebo_gui (http://yang-HP-OMEN-880:32873/)
+ * /twist_marker_server (http://yang-HP-OMEN-880:38951/)
+ * /ekf_localization (http://yang-HP-OMEN-880:43567/)
+ * /twist_mux (http://yang-HP-OMEN-880:43447/)
+ * /robot_state_publisher (http://yang-HP-OMEN-880:35087/)
+ * /base_controller_spawner (http://yang-HP-OMEN-880:34299/)
+ * /teleop (http://yang-HP-OMEN-880:41031/)
+ * /rqt_gui_py_node_24599 (http://yang-HP-OMEN-880:42649/)
+
+Subscribers: 
+ * /rosout (http://yang-HP-OMEN-880:41607/)
+
+
+rostopic info /rosout_agg
+----------------------------------------------------
+Type: rosgraph_msgs/Log
+
+Publishers: 
+ * /rosout (http://yang-HP-OMEN-880:41607/)
+
+Subscribers: None
+
+
+rostopic info /set_pose
+----------------------------------------------------
+Type: geometry_msgs/PoseWithCovarianceStamped
+
+Publishers: None
+
+Subscribers: 
+ * /ekf_localization (http://yang-HP-OMEN-880:43567/)
+
+
+rostopic info /statistics
+----------------------------------------------------
+Type: rosgraph_msgs/TopicStatistics
+
+Publishers: None
+
+Subscribers: 
+ * /rqt_gui_py_node_24599 (http://yang-HP-OMEN-880:42649/)
+
+
+rostopic info /tf
+----------------------------------------------------
+Type: tf/tfMessage
+
+Publishers: 
+ * /robot_state_publisher (http://yang-HP-OMEN-880:35087/)
+ * /ekf_localization (http://yang-HP-OMEN-880:43567/)
+ * /gazebo (http://yang-HP-OMEN-880:37463/)
+
+Subscribers: 
+ * /ekf_localization (http://yang-HP-OMEN-880:43567/)
+
+
+rostopic info /tf_static
+----------------------------------------------------
+Type: tf2_msgs/TFMessage
+
+Publishers: 
+ * /robot_state_publisher (http://yang-HP-OMEN-880:35087/)
+
+Subscribers: 
+ * /ekf_localization (http://yang-HP-OMEN-880:43567/)
+
+
+rostopic info /twist_marker_server/cmd_vel
+----------------------------------------------------
+Type: geometry_msgs/Twist
+
+Publishers: 
+ * /twist_marker_server (http://yang-HP-OMEN-880:38951/)
+
+Subscribers: 
+ * /twist_mux (http://yang-HP-OMEN-880:43447/)
+
+
+rostopic info /twist_marker_server/feedback
+----------------------------------------------------
+Type: visualization_msgs/InteractiveMarkerFeedback
+
+Publishers: None
+
+Subscribers: 
+ * /twist_marker_server (http://yang-HP-OMEN-880:38951/)
+
+
+rostopic info /twist_marker_server/update
+----------------------------------------------------
+Type: visualization_msgs/InteractiveMarkerUpdate
+
+Publishers: 
+ * /twist_marker_server (http://yang-HP-OMEN-880:38951/)
+
+Subscribers: None
+
+
+rostopic info /twist_marker_server/update_full
+----------------------------------------------------
+Type: visualization_msgs/InteractiveMarkerInit
+
+Publishers: 
+ * /twist_marker_server (http://yang-HP-OMEN-880:38951/)
+
+Subscribers: None
+
+
